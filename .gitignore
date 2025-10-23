@@ -1,3 +1,6 @@
+# macOS system junk
 .DS_Store
-Icon/
+Icon
+
+# Specific image
 Python-logo.jpg
