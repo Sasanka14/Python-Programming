@@ -109,24 +109,78 @@ print("Integer Tuple:", int_tuple)
 print("String Tuple:", str_tuple)
 print("Mixed Tuple:", mixed_tuple)
 print("Nested Tuple:", nested_tuple)
+
 # Accessing tuple elements
 print("First element of int_tuple:", int_tuple[0])
 print("Last element of str_tuple:", str_tuple[-1])
+
 # Tuples are immutable, so we cannot modify their elements
 # However, we can concatenate tuples to create a new tuple
 new_tuple = int_tuple + (6, 7, 8)
 print("Concatenated Tuple:", new_tuple)
+
 # Looping through a tuple
 for item in str_tuple:
     print("Item in str_tuple:", item)
+    
 # Finding the length of a tuple
 print("Length of mixed_tuple:", len(mixed_tuple))
+
 # Tuple unpacking
 a, b, c = (10, 20, 30)
 print("Unpacked values:", a, b, c)
+
 # Single element tuple (note the comma)
 single_element_tuple = (42,)
 print("Single Element Tuple:", single_element_tuple)
+
 # Tuple comprehension (actually creates a generator)
 squared_tuple = tuple(x**2 for x in range(1, 6))
 print("Squared Numbers using Tuple Comprehension:", squared_tuple)
+
+# Looping through a list 
+magicians = ["Alice", "Bob", "Charlie"]
+for magician in magicians:
+    print(f"{magician}, that was a great trick!")
+print("Thank you, everyone, for attending the magic show!")
+
+# Numeric Ranges & Generating Lists
+# Using range() to generate a sequence of numbers
+print("Numbers from 0 to 4:")
+for num in range(5):
+    print(num)
+even =list(range(2, 11, 2))
+print("Even numbers from 2 to 10:", even)
+squares = [x**2 for x in range(1, 11)]
+print("Squares from 1 to 10:", squares)
+
+digits = list(range(10))
+print("Digits from 0 to 9:", digits)
+print("Minimum digit:", min(digits))
+print("Maximum digit:", max(digits))
+print("Sum of digits:", sum(digits))
+
+# List Comprehensions
+# Pattern
+cubes = [x**3 for x in range(1, 11)]
+print("Cubes from 1 to 10:", cubes)
+
+# with condition
+even_squares = [x**2 for x in range(1, 11) if x % 2 == 0]
+print("Even squares from 1 to 10:", even_squares)
+
+# Transforming strings
+fruits = ["apple", "banana", "cherry"]
+upper_fruits = [fruit.upper() for fruit in fruits]
+print("Fruits in uppercase:", upper_fruits)
+
+# Slicing : Parts of a List
+players = ["Alice", "Bob", "Charlie", "David", "Eve"]
+print("First three players:", players[:3])
+print("Last two players:", players[-2:])
+print("Middle players:", players[1:4])
+# Looping through a slice
+print("Top three players:")
+for player in players[:3]:
+    print(player)
+

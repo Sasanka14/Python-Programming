@@ -1,6 +1,5 @@
 # guest_list.py
 # Invite 3 friends for dinner, then change one guest and reprint.
-
 guests = ["Panda", "Arjun", "Riya"]
 
 # Original invitations
