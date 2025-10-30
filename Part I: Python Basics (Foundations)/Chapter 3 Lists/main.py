@@ -179,8 +179,48 @@ players = ["Alice", "Bob", "Charlie", "David", "Eve"]
 print("First three players:", players[:3])
 print("Last two players:", players[-2:])
 print("Middle players:", players[1:4])
+
 # Looping through a slice
 print("Top three players:")
 for player in players[:3]:
     print(player)
+
+# Copying a List
+original_players = ["Alice", "Bob", "Charlie"]
+# Using slicing
+copied_players = original_players[:]
+print("Copied Players List:", copied_players)
+
+# Modifying the copied list
+copied_players.append("David")
+print("Original Players List after modifying copied list:", original_players)
+print("Copied Players List after modification:", copied_players)
+
+# Tuple in loops
+scores = [88, 92, 75, 91]
+total = 0
+for s in scores:
+    total += s
+avg = total / len(scores)
+print(f"Average: {avg:.2f}")
+
+# Patterns You’ll Reuse
+# Enumerate with index + value
+for idx, name in enumerate(["a","b","c"], start=1):
+    print(idx, name)
+# Finding index of an item
+colors = ["red", "green", "blue"]
+index_of_green = colors.index("green")
+print("Index of green:", index_of_green)
+
+# Parallel iteration
+names = ["alice","bob"]
+scores = [90, 84]
+for n, s in zip(names, scores):
+    print(f"{n} → {s}")
+
+# Flatten simple nested lists
+nested = [[1,2], [3,4]]
+flat = [x for group in nested for x in group]  # [1,2,3,4]
+print("Flattened List:", flat)
 
